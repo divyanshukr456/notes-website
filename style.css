@@ -562,21 +562,188 @@ body {
   box-shadow: 0 0 15px rgba(255, 59, 107, 0.5);
 }
 
+/* --- Subject View Styles --- */
+.subject-main {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.subject-icon-wrapper {
+    margin: 0 auto 2rem auto;
+    width: 80px;
+    height: 80px;
+    color: #f43f5e;
+}
+
+.subject-icon-wrapper svg {
+    width: 40px;
+    height: 40px;
+}
+
+.subject-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.subject-desc {
+    color: #94a3b8;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.subject-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.action-btn {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    width: auto;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-action {
+    background: #f43f5e;
+    color: white;
+}
+
+.primary-action:hover {
+    background: #e11d48;
+}
+
+.secondary-action {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+}
+
+.secondary-action:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.back-btn {
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
 /* Media Queries */
-@media (max-width: 768px) {
-    .auth-box {
+@media (max-width: 1024px) {
+    .container {
+        height: auto;
+        min-height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .info-section {
+        display: none;
+    }
+    
+    .auth-section {
         padding: 2rem;
     }
+}
 
+@media (max-width: 768px) {
     .nav-search {
         display: none;
     }
 
     .navbar {
-        padding: 1rem;
+        padding: 1rem 1.5rem;
     }
 
     .dashboard {
-        padding: 2rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .dashboard-header {
+        margin-bottom: 2rem;
+    }
+    
+    .dashboard-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .subject-main {
+        padding-top: 3rem;
+    }
+
+    .subject-title {
+        font-size: 2.25rem;
+    }
+
+    .subject-desc {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-section {
+        padding: 1.5rem;
+    }
+    
+    .auth-form h2 {
+        font-size: 1.75rem;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.1rem;
+    }
+
+    .nav-profile {
+        gap: 0.75rem;
+    }
+
+    .back-btn {
+        margin-right: 5px;
+    }
+    
+    .back-text {
+        display: none;
+    }
+
+    .dashboard {
+        padding: 1.5rem 1rem;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .subject-title {
+        font-size: 1.75rem;
+    }
+    
+    .subject-actions {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    
+    .action-btn {
+        width: 100%;
+    }
+    
+    .outline-btn {
+        padding: 0.5rem 1rem;
     }
 }

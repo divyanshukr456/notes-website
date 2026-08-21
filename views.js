@@ -230,28 +230,28 @@ const SubjectView = `
                 <h2>Engineering Hub</h2>
             </div>
             <div class="nav-profile">
-                <a href="#/home" class="btn outline-btn" style="margin-right: 15px;">&larr; Back to Dashboard</a>
+                <a href="#/home" class="btn outline-btn back-btn">&larr; <span class="back-text">Back to Dashboard</span></a>
                 <div class="user-avatar" id="avatar-initial">U</div>
             </div>
         </nav>
 
         <!-- Main Body -->
-        <main class="dashboard" style="max-width: 900px; margin: 0 auto; text-align: center; padding-top: 5rem;">
-            <div class="card-icon" style="margin: 0 auto 2rem auto; width: 80px; height: 80px; color: #f43f5e;">
+        <main class="dashboard subject-main">
+            <div class="card-icon subject-icon-wrapper">
                 <!-- Icon injected via JS -->
-                <svg id="subject-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 40px; height: 40px;"></svg>
+                <svg id="subject-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"></svg>
             </div>
             
-            <h1 id="subject-title" style="font-size: 3rem; margin-bottom: 1rem; color: white;">Subject Title</h1>
-            <p id="subject-desc" style="color: #94a3b8; font-size: 1.2rem; line-height: 1.6; max-width: 600px; margin: 0 auto 3rem auto;">
+            <h1 id="subject-title" class="subject-title">Subject Title</h1>
+            <p id="subject-desc" class="subject-desc">
                 Subject description goes here.
             </p>
             
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-                <button class="btn" style="background: #f43f5e; border: none; padding: 1rem 2rem; border-radius: 12px; color: white; width: auto; font-size: 1.1rem; cursor: pointer;">
+            <div class="subject-actions">
+                <button class="btn action-btn primary-action">
                     View Study Notes
                 </button>
-                <button class="btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 1rem 2rem; border-radius: 12px; color: white; width: auto; font-size: 1.1rem; cursor: pointer;">
+                <button class="btn action-btn secondary-action">
                     Download PDFs
                 </button>
             </div>
